@@ -1,4 +1,3 @@
-from tw2.core import Widget
 from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink
 import defaults
 
