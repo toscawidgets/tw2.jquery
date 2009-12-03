@@ -7,6 +7,10 @@ _plugin_basename_   = 'jquery.%(name)s'
 
 _url_base_          = 'http://ajax.googleapis.com/ajax/libs/jquery/%(version)s/'
 
+#SwitchView
+_switchview_version_    = '1.2'
+_switchview_name_       = 'switchview'
+
 #Jcrop
 _jcrop_version_     = '0.9.8'
 _jcrop_name_        = 'Jcrop'
