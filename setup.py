@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='tw2.jquery',
-    version='',
+    version='2.0b2',
     description='',
     author='',
     author_email='',
     license='MIT',
     url='',
     install_requires=[
-        "tw2.core",
+        "tw2.core>=2.0b2",
         ## Add other requirements here
         # "Genshi",
         ],
