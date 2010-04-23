@@ -9,6 +9,7 @@ _variant_           = ''
 import os
 from tw2.core import Link, core
 from tw2.core.params import Param
+import pkg_resources
 
 class JSLinkError(Exception): pass
 
@@ -26,18 +27,21 @@ class JSLinkMixin(Link):
 
     variant =   Param('File variant, e.g., (min for minified), default is %s' % _variant_, default=_variant_)
 
-    @property
-    def modname(self):
-        raise NotImplementedError('You must set the modname property on your derived class')
+#    @property
+#    def modname(self):
+#        raise NotImplementedError('You must set the modname property on your derived class')
 
     def __init__(self, *args, **kw):
         self._link = None
         super(Link, self).__init__(*args, **kw)
+
+    def prepare(self):
         if not self.is_external:
             modname = self.modname or self.__module__
             rl = core.request_local()
             resources = rl['middleware'].resources
             resources.register(self.modname, os.path.dirname(self.filename), whole_dir=True)
+        super(JSLinkMixin, self).prepare()
 
     @property
     def core_filename(self):
@@ -70,7 +74,7 @@ class JSLinkMixin(Link):
     link = property(_get_link, _set_link)#Variable('Direct web link to file. If this is not specified, it is automatically generated, based on :attr:`modname` and :attr:`filename`.', default=property(_get_link, _set_link))
 
     def abspath(self, filename):
-        return os.sep.join((os.path.dirname(__file__), filename))
+        return os.sep.join((pkg_resources.resource_filename(self.modname, ''),  filename))
 
     def try_filename(self, filename):
         abspath = self.abspath(filename)

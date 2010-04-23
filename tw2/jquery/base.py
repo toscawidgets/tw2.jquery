@@ -1,5 +1,5 @@
 from tw2.core.params import Param
-from tw2.core import CSSLink, DirLink, JSLink
+from tw2.core import CSSLink, DirLink, JSLink, js_function
 from version import JSLinkMixin
 
 import defaults
@@ -36,3 +36,4 @@ class jQueryPluginCSSLink(jQueryPluginLinkMixin, CSSLink):
     subdir = 'css'
     extension = 'css'
 
+jQuery = js_function('jQuery')
