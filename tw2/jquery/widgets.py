@@ -1,4 +1,5 @@
-from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink
+from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink
+from tw2.core.resources import encoder
 import defaults
 
 jquery_js = jQueryJSLink()
@@ -21,6 +22,19 @@ jcrop_js = jQueryPluginJSLink(name=defaults._jcrop_name_, version=defaults._jcro
 # The usable piece, I couldn't figure out a better way to do dependencies
 jcrop = jQueryJSLink(resources = [jcrop_js, jcrop_css])
 
+#jquery.ui
+# Note we use the default smoothness theme
+jquery_ui_css = jQueryUIThemeCSSLink(name=defaults._ui_theme_name_, version=defaults._ui_version_)
+jquery_ui_js = jQueryUIJSLink(version=defaults._ui_version_)
+
+jquery_ui = jQueryJSLink(resources = [jquery_ui_css, jquery_ui_js])
+
+#jqgrid
+jqgrid_css = jQueryPluginCSSLink(name=defaults._jqgrid_name_, version = defaults._jqgrid_version_, basename = defaults._jqgrid_css_basename_)
+jqgrid_locale = jQueryPluginJSLink(name=defaults._jqgrid_name_, basename='grid.locale-%s' % defaults._jqgrid_locale_, subdir='js/i18n', version=defaults._jqgrid_version_)
+jqgrid_js = jQueryPluginJSLink(name=defaults._jqgrid_name_, version = defaults._jqgrid_version_, variant='min')
+
+jqgrid = jQueryJSLink(resources = [jquery_ui_css, jquery_ui_js, jqgrid_locale, jqgrid_js, jqgrid_css])
 
 ####
 ####
@@ -51,3 +65,19 @@ class NullableRadioButtonTable(NullableSelectionField, tw2.forms.widgets.RadioBu
     """TODO: Fix the prepare path"""
     pass
 
+class jqGrid(twc.Widget):
+    resources = [jqgrid]
+    url = twc.Param("Url that jqGrid should pull its data from", default=None)
+    options = twc.Param("Extra options to pass to jqgrid: Defaults {}", default = {})
+    paginate = twc.Param("Will the widget show the pager?", default=None)
+    template = "tw2.jquery.templates.jqgrid"
+
+    def prepare(self):
+        super(jqGrid, self).prepare()
+        self._url = encoder.encode(self.url)
+        self._options = encoder.encode(self.options)
+        if self.paginate:
+            self._pager = 'pag_' + self.attrs['id']
+        else:
+            self._pager = None
+        self._pager = encoder.encode(self._pager)

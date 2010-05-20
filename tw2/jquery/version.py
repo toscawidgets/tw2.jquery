@@ -90,12 +90,11 @@ class JSLinkMixin(Link):
     def filename(self):
         #make basename windows/qnix compat
         basename = self.core_filename
-        basename = self.basename.replace('/', os.sep)
-        basename = self.basename.replace('\\', os.sep)
+        basename = basename.replace('/', os.sep)
+        basename = basename.replace('\\', os.sep)
 
-        basename = os.sep.join(('static', self.dirname, basename)) % self.substitutions
+        filename = os.sep.join(('static', self.dirname, basename)) % self.substitutions
         #try the default
-        filename =  '.'.join((basename, self.extension))
         return self.try_filename(filename)
 
     @property
