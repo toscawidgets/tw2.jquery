@@ -11,5 +11,12 @@
     jQuery(document).ready(
       function(){ 
         jQuery("#${w.attrs['id']}").jqGrid(${w.attrs['id']}_options);
+    % if w._pager_options:
+        jQuery("#${w.attrs['id']}").jqGrid('navGrid', '#' + ${w._pager},
+            ${w._pager_options.get('options', "null")},
+            ${w._pager_options.get('pEdit', "null")},
+            ${w._pager_options.get('pAdd', "null")},
+            ${w._pager_options.get('pSearch', "null")});
+    % endif
       }); 
 </script>
