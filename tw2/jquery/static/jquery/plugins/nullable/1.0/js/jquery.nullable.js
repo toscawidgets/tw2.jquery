@@ -12,7 +12,7 @@
 (function($) {
 	$.nullable = {
         css_class: 'nullable',
-        checked_class: 'chk_on',
+        checked_class: 'chk_on'
 	};
 
     $.toggle_null = function(elem, selector, checked_class) {
