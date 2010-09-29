@@ -1,4 +1,4 @@
-from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink
+from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink, DirLink
 from tw2.core.resources import encoder
 import formencode.validators as fv
 import defaults
@@ -18,10 +18,12 @@ jswitchview = jQueryJSLink(resources=[jswitchview_js, jswitchview_css])
 
 #Jcrop
 jcrop_css = jQueryPluginCSSLink(name=defaults._jcrop_name_, version=defaults._jcrop_version_)
+#static/jquery/plugins/Jcrop/0.9.8/css/
+jcrop_css_dir = DirLink(filename=defaults._plugin_dirname_ % dict(name=defaults._jcrop_name_, version=defaults._jcrop_version_, subdir="css"))
 jcrop_js = jQueryPluginJSLink(name=defaults._jcrop_name_, version=defaults._jcrop_version_)
 
 # The usable piece, I couldn't figure out a better way to do dependencies
-jcrop = jQueryJSLink(resources = [jcrop_js, jcrop_css])
+jcrop = jQueryJSLink(resources = [jcrop_js, jcrop_css, jcrop_css_dir])
 
 #jquery.ui
 # Note we use the default smoothness theme
