@@ -10,6 +10,7 @@ setup(
     url='',
     install_requires=[
         "tw2.core>=2.0b2",
+        "formencode",  # TBD - do we actually need the jqGrid Schema?
         ## Add other requirements here
         # "Genshi",
         ],
