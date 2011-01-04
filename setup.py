@@ -10,6 +10,7 @@ setup(
     url='',
     install_requires=[
         "tw2.core>=2.0b2",
+        "tw2.forms",
         ## Add other requirements here
         # "Genshi",
         ],
