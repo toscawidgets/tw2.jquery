@@ -15,7 +15,7 @@ setup(
         # "Genshi",
         ],
     packages=find_packages(exclude=['ez_setup', 'tests']),
-    namespace_packages = ['tw2'],
+    namespace_packages = ['tw2', 'tw2.jqplugins'],
     zip_safe=False,
     include_package_data=True,
     test_suite = 'nose.collector',
