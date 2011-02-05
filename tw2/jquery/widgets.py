@@ -1,6 +1,5 @@
 from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink, DirLink
 from tw2.core.resources import encoder
-import formencode.validators as fv
 import defaults
 
 jquery_js = jQueryJSLink()
