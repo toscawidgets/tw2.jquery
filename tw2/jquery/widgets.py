@@ -1,4 +1,4 @@
-from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink, DirLink
+from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, DirLink
 from tw2.core.resources import encoder
 import defaults
 
