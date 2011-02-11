@@ -1,5 +1,5 @@
-tw2.jqplugins.elrte
-=====================
+tw2.jquery
+==========
 
 :Author: Joseph Tate <jtate@dragonstrider.com>
 
