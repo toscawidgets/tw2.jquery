@@ -1,4 +1,4 @@
-from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink, jQueryUIThemeCSSLink, jQueryUIJSLink
+from base import jQueryJSLink, jQueryCSSLink, jQueryPluginJSLink, jQueryPluginCSSLink
 from tw2.core.resources import encoder
 import formencode.validators as fv
 import defaults
