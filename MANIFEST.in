@@ -1,0 +1,4 @@
+include README
+include README.rst
+recursive-include tw2/jquery/static *
+recursive-include tw2/jquery/templates *
