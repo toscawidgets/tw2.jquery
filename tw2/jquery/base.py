@@ -36,4 +36,5 @@ class jQueryPluginCSSLink(jQueryPluginLinkMixin, CSSLink):
     subdir = 'css'
     extension = 'css'
 
+jquery_js = jQueryJSLink()
 jQuery = js_function('jQuery')

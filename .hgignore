@@ -10,3 +10,4 @@ syntax: glob
 tags
 dist
 build
+htmlcov

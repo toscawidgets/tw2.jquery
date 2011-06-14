@@ -1,1 +1,1 @@
-from widgets import *
+from base import jquery_js, jQuery

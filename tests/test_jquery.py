@@ -22,7 +22,12 @@ def setup():
     twc.core.request_local()['middleware'] = twc.make_middleware()
 
 
-def test_jquery():
+def test_jquery_resource():
     from tw2.jquery import jquery_js
     the_link = '/resources/tw2.jquery/static/jquery/1.6.0/jquery.js'
     assert(jquery_js.req().link == the_link)
+
+def test_jquery_js_function():
+    from tw2.jquery import jQuery
+    assert(str(jQuery('foo')) == 'jQuery("foo")')
+
