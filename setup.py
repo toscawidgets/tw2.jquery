@@ -11,7 +11,7 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.0b6',
+    version='2.0b7',
     description=long_description ,
     author='Joseph Tate',
     author_email='jtate@dragonstrider.com',
@@ -19,7 +19,11 @@ setup(
     url='http://bitbucket.org/toscawidgets/tw2jquery/overview',
     install_requires=[
         "tw2.core>=2.0b2",
-        "tw2.forms"
+        "tw2.forms",
+
+        # This is actually ridiculous...
+        "formencode",
+
         ],
     extras_require = {
         'genshi': _extra_genshi,
