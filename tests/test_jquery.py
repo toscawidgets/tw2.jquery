@@ -24,7 +24,7 @@ def setup():
 
 def test_jquery_resource():
     from tw2.jquery import jquery_js
-    the_link = '/resources/tw2.jquery/static/jquery/1.6.0/jquery.js'
+    the_link = '/resources/tw2.jquery/static/jquery/1.6.2/jquery.js'
     assert(jquery_js.req().link == the_link)
 
 def test_jquery_js_function():
