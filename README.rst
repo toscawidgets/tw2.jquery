@@ -12,7 +12,7 @@ tw2.jquery is a `ToscaWidgets2 (tw2)`_ wrapper for `jquery`_.
 
 Live Demo
 ---------
-.. comment: Peep the `live demonstration <http://craftsman.rc.rit.edu/module?module=tw2.jquery>`_.
+.. comment: Peep the `live demonstration <http://tw2-demos.threebean.org/module?module=tw2.jquery>`_.
 
 Links
 -----
