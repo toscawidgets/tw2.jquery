@@ -13,7 +13,7 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.0b9',
+    version='2.0b11',
     description=long_description ,
     author='Joseph Tate',
     author_email='jtate@dragonstrider.com',
@@ -55,5 +55,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: JavaScript',
+        'License :: OSI Approved :: MIT License',
     ],
 )

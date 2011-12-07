@@ -1,4 +1,5 @@
 include README
 include README.rst
+include LICENSE.txt
 recursive-include tw2/jquery/static *
 recursive-include tw2/jquery/templates *
