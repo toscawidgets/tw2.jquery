@@ -22,10 +22,6 @@ setup(
     install_requires=[
         "tw2.core>=2.0b2",
         "tw2.forms",
-
-        # This is actually ridiculous...
-        "formencode",
-
         ],
     extras_require = {
         'genshi': _extra_genshi,
