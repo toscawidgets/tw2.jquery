@@ -13,8 +13,9 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.0b12',
-    description=long_description ,
+    version='2.0b13',
+    description="toscawidgets2 wrapper for jQuery",
+    long_description=long_description,
     author='Joseph Tate',
     author_email='jtate@dragonstrider.com',
     license='MIT',
