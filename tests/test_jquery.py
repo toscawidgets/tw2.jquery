@@ -29,5 +29,5 @@ def test_jquery_resource():
 
 def test_jquery_js_function():
     from tw2.jquery import jQuery
-    assert(str(jQuery('foo')) == 'jQuery("foo")')
+    assert(str(jQuery('foo').req()) == 'jQuery("foo")')
 
