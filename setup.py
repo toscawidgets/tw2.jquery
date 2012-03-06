@@ -13,13 +13,13 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.0b13',
+    version='2.0b14',
     description="toscawidgets2 wrapper for jQuery",
     long_description=long_description,
     author='Joseph Tate',
     author_email='jtate@dragonstrider.com',
     license='MIT',
-    url='http://bitbucket.org/toscawidgets/tw2jquery/overview',
+    url='http://github.com/toscawidgets/tw2.jquery',
     install_requires=[
         "tw2.core>=2.0b2",
         "tw2.forms",
