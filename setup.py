@@ -30,7 +30,7 @@ setup(
     },
     tests_require = ['BeautifulSoup', 'nose', 'FormEncode', 'mako'],
     packages=find_packages(exclude=['ez_setup', 'tests']),
-    namespace_packages = ['tw2', 'tw2.jqplugins'],
+    namespace_packages = ['tw2']],
     zip_safe=False,
     include_package_data=True,
     test_suite = 'nose.collector',
