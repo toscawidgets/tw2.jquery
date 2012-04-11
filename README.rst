@@ -16,7 +16,7 @@ Live Demo
 
 Links
 -----
-Get the `source from github <http://github.com/toscawidgets/2.jquery>`_.
+Get the `source from github <http://github.com/toscawidgets/tw2.jquery>`_.
 
 `PyPI page <http://pypi.python.org/pypi/tw2.jquery>`_
 and `bugs <https://github.com/toscawidgets/tw2.jquery/issues>`_
