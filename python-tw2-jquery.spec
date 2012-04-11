@@ -3,7 +3,7 @@
 %global modname tw2.jquery
 
 Name:           python-tw2-jquery
-Version:        2.0.0
+Version:        2.0.1
 Release:        1%{?dist}
 Summary:        Forms for ToscaWidgets2
 
@@ -82,5 +82,5 @@ rm -rf %{buildroot}
 %{python_sitelib}/*
 
 %changelog
-* Wed Apr 11 2012 Ralph Bean <rbean@redhat.com> - 2.0.0-1
+* Wed Apr 11 2012 Ralph Bean <rbean@redhat.com> - 2.0.1-1
 - Initial packaging for Fedora
