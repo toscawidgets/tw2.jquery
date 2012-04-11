@@ -3,8 +3,8 @@
 %global modname tw2.jquery
 
 Name:           python-tw2-jquery
-Version:        2.0.1
-Release:        2%{?dist}
+Version:        2.0.2
+Release:        1%{?dist}
 Summary:        jQuery for ToscaWidgets2
 
 Group:          Development/Languages
@@ -82,6 +82,10 @@ rm -rf %{buildroot}
 %{python_sitelib}/*
 
 %changelog
+* Wed Apr 11 2012 Ralph Bean <rbean@redhat.com> - 2.0.2-1
+- Packaging latest release.
+- Fixing a collision of the tests.
+
 * Wed Apr 11 2012 Ralph Bean <rbean@redhat.com> - 2.0.1-2
 - Fixed typo in Summary.  Forms -> jQuery
 

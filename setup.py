@@ -13,7 +13,7 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.0.1',
+    version='2.0.2',
     description="toscawidgets2 wrapper for jQuery",
     long_description=long_description,
     author='Joseph Tate',
@@ -29,7 +29,7 @@ setup(
         'mako': _extra_mako,
     },
     tests_require = ['BeautifulSoup', 'nose', 'FormEncode', 'mako'],
-    packages=find_packages(exclude=['ez_setup']),
+    packages=['tw2', 'tw2.jquery'],
     namespace_packages = ['tw2'],
     zip_safe=False,
     include_package_data=True,
