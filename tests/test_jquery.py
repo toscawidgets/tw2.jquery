@@ -1,3 +1,4 @@
+from nose.tools import eq_
 import tw2.core as twc
 
 def request_local_tst():
@@ -25,9 +26,9 @@ def setup():
 def test_jquery_resource():
     from tw2.jquery import jquery_js
     the_link = '/resources/tw2.jquery/static/jquery/1.7.1/jquery.js'
-    assert(jquery_js.req().link == the_link)
+    eq_(jquery_js.req().link, the_link)
 
 def test_jquery_js_function():
     from tw2.jquery import jQuery
-    assert(str(jQuery('foo').req()) == 'jQuery("foo")')
+    eq_(str(jQuery('foo')), 'jQuery("foo")')
 
