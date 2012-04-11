@@ -2,3 +2,4 @@ include README
 include README.rst
 include LICENSE.txt
 recursive-include tw2/jquery/static *
+recursive-include tests *.py
