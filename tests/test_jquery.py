@@ -32,3 +32,14 @@ def test_jquery_js_function():
     from tw2.jquery import jQuery
     eq_(str(jQuery('foo')), 'jQuery("foo")')
 
+def test_jquery_external():
+    from tw2.jquery import jquery_js
+    jquery_js.external = True
+    the_link = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1//jquery.js'
+    eq_(jquery_js.req().link, the_link)
+
+def test_jquery_custom():
+    from tw2.jquery import jquery_js
+    the_link = "/foo/bar/jquery.js"
+    jquery_js.link = the_link
+    eq_(jquery_js.req().link, the_link)
