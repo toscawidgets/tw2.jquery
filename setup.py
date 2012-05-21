@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 
-import multiprocessing, logging
+try:
+    import multiprocessing, logging
+except ImportError:
+    pass
 
 f = open('README.rst')
 long_description = f.read().strip()
