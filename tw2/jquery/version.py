@@ -75,12 +75,13 @@ class JSLinkMixin(Link):
                 link = self.external_link
             else:
                 link = ('/' + '/'.join((
+                    mw.config.script_name.strip('/'),
                     mw.config.res_prefix.strip('/'),
                     self.modname,
                     'static',
                     self.dirname,
                     self.core_filename
-                )))
+                ))).replace('//', '/')
             self._link = link
         return self._link % self.substitutions
 
