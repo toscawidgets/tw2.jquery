@@ -1,3 +1,5 @@
+import sys
+
 from setuptools import setup, find_packages
 
 try:
@@ -5,6 +7,15 @@ try:
     import logging
 except:
     pass
+
+requires=[
+    "tw2.core>=2.0b2",
+    "tw2.forms",
+]
+
+if sys.version_info[0] == 2 and sys.version_info[1] <= 5:
+    requires.append('WebOb<=1.1.1')
+
 
 f = open('README.rst')
 long_description = f.read().strip()
@@ -24,10 +35,7 @@ setup(
     author_email='jtate@dragonstrider.com',
     license='MIT',
     url='http://github.com/toscawidgets/tw2.jquery',
-    install_requires=[
-        "tw2.core>=2.0b2",
-        "tw2.forms",
-        ],
+    install_requires=requires,
     extras_require = {
         'genshi': _extra_genshi,
         'mako': _extra_mako,
