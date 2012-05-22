@@ -1,4 +1,10 @@
-from setuptools import setup, find_packages
+""" tw2.jquery """
+
+import sys
+import os
+import logging
+
+from setuptools import setup
 
 try:
     import multiprocessing
