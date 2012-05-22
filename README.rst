@@ -40,3 +40,22 @@ This module, tw2.jquery, provides `toscawidgets2 (tw2)`_ access to the
 classes for creating these plugins.
 
 Special thanks to Ralph Bean and Chris Perkins for their contributions.
+
+Build Status
+------------
+
+.. |master| image:: https://secure.travis-ci.org/toscawidgets/tw2.jquery.png?branch=master
+   :alt: Build Status - master branch
+   :target: http://travis-ci.org/#!/toscawidgets/tw2.jquery
+
+.. |develop| image:: https://secure.travis-ci.org/toscawidgets/tw2.jquery.png?branch=develop
+   :alt: Build Status - develop branch
+   :target: http://travis-ci.org/#!/toscawidgets/tw2.jquery
+
++----------+-----------+
+| Branch   | Status    |
++==========+===========+
+| master   | |master|  |
++----------+-----------+
+| develop  | |develop| |
++----------+-----------+
