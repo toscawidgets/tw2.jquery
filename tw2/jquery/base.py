@@ -1,8 +1,8 @@
 from tw2.core.params import Param
 from tw2.core import CSSLink, DirLink, JSLink, js_function
-from version import JSLinkMixin
+from .version import JSLinkMixin
 
-import defaults
+from . import defaults
 
 
 class jQueryLinkMixin(JSLinkMixin):
