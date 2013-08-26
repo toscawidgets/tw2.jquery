@@ -1,1 +1,1 @@
-from base import jquery_js, jQuery
+from .base import jquery_js, jQuery
