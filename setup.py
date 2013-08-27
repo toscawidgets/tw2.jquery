@@ -8,13 +8,18 @@ try:
 except:
     pass
 
-requires=[
+requires = [
     "tw2.core>=2.0b2",
     "tw2.forms",
 ]
+tests_require = [
+    'nose',
+    'mako',
+]
 
-if sys.version_info[0] == 2 and sys.version_info[1] <= 5:
-    requires.append('WebOb<=1.1.1')
+
+if sys.version_info[0] < 3:
+    tests_require.append('FormEncode')
 
 
 f = open('README.rst')
@@ -28,7 +33,7 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery',
-    version='2.2.0',
+    version='2.2.0.2',
     description="toscawidgets2 wrapper for jQuery",
     long_description=long_description,
     author='Joseph Tate',
@@ -40,7 +45,7 @@ setup(
         'genshi': _extra_genshi,
         'mako': _extra_mako,
     },
-    tests_require = ['BeautifulSoup', 'nose', 'FormEncode', 'mako'],
+    tests_require=tests_require,
     packages=['tw2', 'tw2.jquery'],
     namespace_packages = ['tw2'],
     zip_safe=False,
