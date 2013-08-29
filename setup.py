@@ -34,12 +34,13 @@ _extra_mako = ["Mako >= 0.1.1"]
 setup(
     name='tw2.jquery',
     version='2.2.0.2',
-    description="toscawidgets2 wrapper for jQuery",
+    description='jQuery wrapper for ToscaWidgets 2, a web widget toolkit.',
     long_description=long_description,
     author='Joseph Tate',
     author_email='jtate@dragonstrider.com',
-    license='MIT',
     url='http://github.com/toscawidgets/tw2.jquery',
+    download_url="https://pypi.python.org/pypi/tw2.jquery/",
+    license='MIT',
     install_requires=requires,
     extras_require = {
         'genshi': _extra_genshi,
