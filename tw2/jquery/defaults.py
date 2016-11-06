@@ -1,4 +1,4 @@
-_version_ = '1.7.1'
+_version_ = '3.1.0'
 _dirname_ = 'jquery/%(version)s'  # This will be used to generate links
 _basename_ = 'jquery'
 # same, but for plugins
